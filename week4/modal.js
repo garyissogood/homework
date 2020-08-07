@@ -68,9 +68,9 @@ export default {
                     </div>
                     <div class="form-group">
                         <div class="form-check">
-                            <input type="checkbox" id="is_enabled" v-model="tempProduct.is_enabled"
-                                class="form-check-input" :true-value="1" :flase-value="0">
-                            <label for="is_enabled" class="form-check-label">是否啟用</label>
+                            <input type="checkbox" id="enabled" v-model="tempProduct.enabled"
+                                class="form-check-input">
+                            <label for="enabled" class="form-check-label">是否啟用</label>
                         </div>
                     </div>
                 </div>
