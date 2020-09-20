@@ -1,0 +1,79 @@
+//會員登入
+.login{ 
+  width: 100%; min-height: 800px; display: block;
+  background: url(assets/images/member-loginbg.jpg) no-repeat center; 
+  
+  .login__box{  
+    padding: 30px 30px 70px; position: absolute;left:52%;top:150px; 
+    width: 350px; background: #f2f2f2;
+    box-shadow:0px 0px 5px rgba($color: #000000, $alpha: .35);
+
+    .title {  margin: 30px 0 40px 0 ;}
+
+    .login__box__input{ margin-bottom: 30px;
+      i,input{display: inline-block;vertical-align: middle;}
+      i{ color: #666; font-size: 16px; width: 26px; }
+      input{ padding: 5px; width: calc(100% - 30px);}
+    }
+
+    .login__box__btn{ text-align: center;margin: 40px 0 30px;
+      button{ 
+        background: #168ECC; border: none; color: #fff;
+        padding: 5px 20px; cursor: pointer;
+        &:hover{ background: $color-main;}
+      }
+    }
+
+    .login__box__link{text-align: center;
+      a{color: #666; margin: 0 10px; text-decoration: underline;
+        &:hover{ color: $color-main;}
+      }
+    }
+  }
+
+  .login__text{ 
+    width: 40%; color: #eee;padding: 16% 0 0 5%;
+    text-shadow:3px 3px 3px rgba($color: #000000, $alpha: .35);;
+    b{ font-size: 46px;font-family: $title-font;color: #fff; display: block; margin-bottom: 20px;}
+  }
+
+  @include rwd-pad{
+    background: url(assets/images/member-loginbg.jpg) no-repeat top left; 
+    .login__box{ 
+      padding: 10px 30px 30px; left:15%;top:32%; width: 75%; 
+      .title {  margin: 20px 0 ;}
+
+      .login__box__input{ margin-bottom: 20px;}
+
+      .login__box__btn{ 
+        text-align: left;margin: 10px 0 30px 30px;display: inline-block;
+        button{ padding: 5px 40px; }
+      }
+
+      .login__box__link{text-align: left; display: inline-block;
+        a{color: #666; margin:0 0 0 30px; }
+      }
+    }
+    .login__text{ width: 80%; margin: 0 auto;  padding: 10% 0 0 5%; }
+  }
+  @include rwd-mobile{
+    .login__box{ 
+      padding: 10px 30px 40px; left:8%;top:35%; width: 85%; 
+      .title {  margin: 30px 0 ;
+        .title__box {padding: 0;}
+      }
+    }
+    .login__text{ 
+      width: 88%;  padding: 10% 0 0 4%; font-size: 12px; line-height: 20px;
+      b{font-size: 30px;}
+    }
+  }
+
+  @include rwd-phoneSe{
+    .login__box{ top:42%; }
+    .login__text{ 
+      b{font-size: 24px;}
+    }
+  }
+
+}

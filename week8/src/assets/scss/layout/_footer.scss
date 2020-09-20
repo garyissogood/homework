@@ -1,0 +1,75 @@
+.footer { display: block; width: 100%;
+
+    .footer__social{
+        display: block;text-align: center;padding:5px 0; background: rgb(97, 97, 97);
+        li{display: inline-block; margin: 0 20px;font-size: 18px;vertical-align: middle;
+            a{ color:#ccc;
+                &:hover{color: #fff;}
+            }            
+        }
+        //li:nth-child(2){font-size: 24px;}
+    }
+
+    .footer__box{ 
+        background: #352F2F;padding:2% 5%; width: 100%; display: block; font-size: 13px;color: #fff;
+        a { color: #ccc;}
+        .footer__box__info{ 
+            display: inline-block;line-height: 30px; color: #ddd;
+            vertical-align: top; width: calc(25% - 4px); 
+            span{display: block;}
+            
+        }
+        .footer__box__list{ 
+            display: inline-block;vertical-align: top; width: calc(75% - 4px);
+            li{display: inline-block; width: calc( 16.66% - 4px);vertical-align: top;}
+            a{display: block; color: #999;}
+            a:hover{ color:$color-main;}
+            @include rwd-pad { display: block; width: 100%;}
+        }
+
+        @include rwd-pad {  padding:2%;
+            .footer__box__info,.footer__box__list{
+                display: block; width: 100%; text-align: center;
+            }
+            .footer__box__info{ margin-bottom: 10px; color: #ccc;line-height: 20px;
+                span{display: inline-block; margin: 0 5px;}
+            }  
+        }
+
+        @include rwd-mobile-big { 
+            .footer__box__list{ display: none;}
+        }
+    }
+
+    .footer__copyright{
+        background: #484848; text-align: center; font-size: 12px;color: #eee; padding: 10px 0;
+        p,a { display: inline-block;}
+        a { color: #999; border-left: 1px solid #999; line-height: 12px; padding-left: 5px;margin-left: 5px;}
+        a:hover{ color: #000;}
+
+        @include rwd-mobile-big { line-height: 18px;
+            p{ display: block;}
+            .line{border-right: 1px solid #999;  padding-right: 5px; margin-right: 5px;}
+        }
+    }
+
+
+}
+
+
+//回到頂端
+.go__top{ 
+    
+    position:fixed; bottom:15%; right:-100%; z-index: 100; transition:all .8s;
+    
+    
+	.go__top__btn{
+        color: #333; display: block;background: #999; 
+        width: 50px; height: 50px;  text-align: center;line-height: 45px;
+        border-radius:50%;font-size: 18px;
+        border:2px solid #999; 
+        // box-shadow:0px 0px 3px rgba($color: #000000, $alpha: .5); 
+        &:hover{ background: #333;color: #fff; border:2px solid #eee; }
+    }
+	
+}

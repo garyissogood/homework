@@ -1,0 +1,118 @@
+
+//手機選單
+.mobile{ display: none;
+       
+    @include rwd-pad { display: block;}
+
+    .mobile__header{
+        display: block; width: 100%; z-index: 200; position: fixed; top:0; height:60px; 
+        background:#fff; box-shadow:0px 0px 5px rgba($color: #000000, $alpha: .3);
+        
+        .mobile__header__logo { width: 100%;
+            a{display: block;margin: 15px 0 0 15px;}
+            svg{ width: 150px;
+                .st0{fill:#B60033;}
+            }
+            img{display: block; margin: 15px 0 0 15px; max-width: 190px;
+                @include rwd-mobile { margin:22px 0 0 20px;max-width: 150px;}
+            }
+            
+        }
+        .mobile__header__car,.mobile__header__user { 
+            position: absolute; top:25px; color: #555; font-size: 18px; }
+        .mobile__header__car { right: 120px; }
+        .mobile__header__user { right: 80px;font-size: 20px;}
+        .mobile__header__user__img { 
+            position: absolute; top:13px;right: 65px;font-size: 20px; width: 40px;
+            img{ border-radius: 50%;}
+        }
+        .mobile__header__menuBtn {  position: absolute; top:20px; right: 20px;
+            & span, &:before, &:after {
+                display: block; content: ""; transition: all 300ms; background-color: #333;
+                margin: 5px; width: 26px; height: 3px; text-indent: -100%; overflow: hidden; white-space: nowrap;
+            }
+        }
+        .active { transform: rotate(180deg);margin-left: -10px;
+            span {background-color: transparent; box-shadow: none }
+            &:before, &:after { background-color: #666; }
+            &:before {transform: translateY(8px) rotate(-45deg)}
+            &:after {transform: translateY(-8px) rotate(45deg)}        
+        }
+    }
+
+    .mobile__menu{ 
+        width: 100%; position: fixed; top:60px; background: #fff;
+        z-index: 199;box-shadow:0px 0px 5px rgba($color: #000, $alpha: .3);
+        a{text-decoration: none; color: #333;}
+
+        .mobile__menu__search { 
+            display: block; width: 100%; background: #ddd; padding: 5px;
+            box-shadow:0px 0px 5px inset rgba($color: #000, $alpha: .1);
+            input,button{background: none; border: none;vertical-align: middle;}
+            input { width: calc( 100% - 36px); padding: 5px 8px; letter-spacing: 3px; }
+            button {  font-size: 16px; color: #666;}
+        }
+
+        .mobile__menu__list { display: block;
+            >li{  display: block; border-bottom: 1px solid #ccc; 
+                &:last-child { border-bottom: none;}
+                .mobile__menu__list--btn{ display: block; padding: 10px; 
+                    p { display: inline-block; width: 95%; color: #333;letter-spacing: 3px;}
+                    i { display: inline-block; width: 5%;color: #ccc; text-align: center;}
+                }
+            }
+        }
+
+        .mobile__menu__list__sec { display: block; background: #888; 
+            >li{ display: block; border-bottom: 1px solid #ddd;
+                &:last-child { border-bottom: none;} 
+                .mobile__menu__list__sec--btn{ display: block; padding: 8px 10px 8px 30px; 
+                    i { display: inline-block; width: 5%; color: #ddd; text-align: center;}
+                    p { display: inline-block; width: 80%; color: #fff;}
+                }
+            }
+        }
+
+        .mobile__menu__list__third { display: block; background: #666; 
+            >li { display: block;
+                a { 
+                    display: block; color: #eee; width: 70%; margin-left: 30%;
+                    border-bottom: 1px solid #999; padding:8px 20px 8px;
+                }  
+                &:last-child a { border-bottom: none;}               
+            }
+
+        }
+
+    }
+
+    
+
+
+}
+
+
+.rotate90{ transform: rotate(90deg);}
+
+
+
+
+//     ul{ display: block; width: 100%; position: absolute; background:rgba(126,180,63,.8);
+// 		li{ width:100%; text-align: center; border-bottom: 1px solid #ccc;
+
+// 			a{ color: #fff; display: block;padding:10px 5px; font-size: 16px;
+// 				text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+// 				 &:hover{ background:#477a0b; color: #fff;
+// 				 	i{color:#000}
+// 				 }
+// 			}
+// 			p{display: inline-block; padding-right: 10px;
+// 				b{padding-right: 10px;}
+// 			}
+// 			i{display: inline-block; color:#ddd}
+
+// 		}
+// 		li.lan{ a{display: inline-block; margin:0 10px;}
+// 		}
+// 	}
+// }

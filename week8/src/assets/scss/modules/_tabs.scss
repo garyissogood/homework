@@ -1,0 +1,21 @@
+
+//標籤
+.tab__box { width: 100%; display: block;
+    .tab__nav { width: 100%; margin-bottom: 30px; display: block; 
+        .tabs { display: block; text-align: center;
+            li { display: inline-block; margin:0 20px;
+                a{color: #666;font-weight: bold;padding: 5px; border-bottom: 1px solid #eee;}
+                a:hover{ color: $color-main;}
+            }
+            li.active{
+                a{ color:#000;  border-bottom: 1px solid #666;}
+                a:hover{ color: $color-main;}
+            }
+        }
+    }
+
+    .tab__container { width: 100%; display: block; margin: 0 auto;}
+    .tab__content { width: 100%;display: block; }
+}
+
+.tab__box--top{margin-top: 0px;}

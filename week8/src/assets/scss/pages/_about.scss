@@ -1,0 +1,20 @@
+
+.about{ padding:3% 5% 0%;
+  .about__text,.about__info{
+    display: block; width:80%;margin: 0 auto 5% auto;
+  }
+  .about__info{ text-align: center;
+    img{display: inline-block; margin-bottom: 20px;}
+    .about__info__data{ color: #17485A;
+      span{display: block;}
+      a{color: #17485A;}
+      a:hover{ color: $color-main;}
+    }
+  }
+
+  @include rwd-pad{ padding: 0 3%;
+    .about__text,.about__info{
+      display: block; width: 100%; margin-bottom: 30px;
+    }
+  }
+}

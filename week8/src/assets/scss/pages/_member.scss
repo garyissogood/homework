@@ -1,0 +1,202 @@
+
+//會員中心
+.member{ 
+  width: 100%; min-height: 650px; display: block; padding: 8% 0;
+  background: url(images/memberbg.jpg) repeat top center; 
+
+  .member__box{ width: 100%; max-width: 850px; margin: 0 auto;}
+
+  
+  
+  .member__box__sild{ 
+    width: 200px; margin-top: 100px; float: left;line-height: 30px;
+    a{color: #333;display: block; cursor: text;;}   
+    
+    
+    .sild__title{ 
+      font-size: 16px;border-bottom: 1px solid #999;margin-bottom: 10px;
+      b{display: inline-block;border-bottom: 3px solid #666;
+        margin-bottom: -3px;font-weight: bold;}
+    }
+  
+    .sild__btn{ cursor: pointer;
+      &:hover{ color: $color-main;}
+    }
+  
+    .sild__line{margin: 30px 0;
+      hr{ border:none; border-bottom: 1px solid #999;}
+    }
+  
+    .sild__btn__sign{ font-weight: bold;cursor: pointer;
+      i,p{display: inline-block;font-size: 16px;vertical-align: middle;}
+      &:hover{ color: $color-main;}
+    }
+  
+  }
+
+  .member__box__main{ 
+    width: calc(100% - 200px); min-height: 650px; float: left; padding-bottom: 40px;
+    box-shadow:0px 0px 10px rgba($color: #000000, $alpha: .35);
+    background:#F9F9F9 url(images/nrnber-bar.jpg) no-repeat -150px -20px ;
+
+    //大頭照
+    .member__img{text-align: center; width: 200px; margin: 50px auto;position: relative;
+      img{display: inline-block; border-radius: 50%; border: 2px solid #666;}
+      button{
+        position: absolute;left: 50%; transform: translateX(-50%);bottom:-10px;
+        border-radius: 50%;border: 1px solid #666;width: 40px;height: 40px;
+        box-shadow:0px 2px 5px rgba($color: #000000, $alpha: .5);cursor: pointer;
+        i{display: block;line-height: 36px;font-size: 24px;margin-left: 2px;}
+        &:hover{color: #fff; background: $color-main;}
+      }
+    }
+
+    //表格
+    .member__table{ 
+      .member__table__tb{
+        display: block;  margin: 0px auto 15px auto; width: 80%;
+        border-bottom: 1px solid #ccc;padding:0 0 10px 22% ;
+        b,p{display: inline-block;vertical-align: middle; }
+        b{color: #444;margin-right: 5px; }
+        input[type=text]{padding: 5px; width: calc(100% - 100px); 
+          color: #000; font-size: 16px;
+        }
+        .member__date{ padding: 5px;}        
+      }      
+    }
+
+    //文字
+    .member__box__main--title{
+      display: block; font-weight: bold;
+      margin: 80px 0 0 60%; font-size: 18px;
+      border-bottom: 1px solid #999;width: 40%;
+      p{display: inline-block; color: #333;
+        border-bottom: 3px solid #666;margin-bottom: -3px;
+      }
+    }
+    .member__box__main__container{
+      width: 75%; margin: 130px auto 20px ;
+      input[type=text],input[type=password],.select{ width: 100%; padding: 5px;}
+      
+      >li{margin-bottom: 30px;}
+      ol{list-style-type: decimal; margin-left: 1rem;
+        li{margin-bottom: 10px;}
+      }
+
+      .star{ font-size: 16px; vertical-align: middle; display: inline-block;margin-right: 5px;}
+      input[type=radio]{display: inline-block; color: #000;vertical-align: middle;}
+      .radio__text{display: inline-block;margin-right: 10px;vertical-align: middle;}
+      .select__date{width: calc(33.3% - 4px); padding: 5px;}
+      .subtitle{border-left: 5px solid #666; line-height: 14px; 
+        padding-left: 5px;font-weight: bold;}
+      .checkbox{
+        display: block;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;
+        padding: 10px;text-align: center; color: #168ECC;
+        p,input[type=checkbox]{display: inline-block;vertical-align: middle;}
+      }
+      .width-box{ display: block; margin: 10px 0;
+        button{ cursor: pointer;}
+      }
+      input[type=text].width-box-min{ width: 100px;}
+
+    }
+
+    .member__btnbox{display: grid; grid-template-columns:1fr 1fr; 
+      border-bottom: 1px solid #ccc; padding-bottom: 20px;margin-top: 40px;
+      .member__btnbox__btn{ 
+        width: 70%; margin: 0 auto; display: block;color: #fff;padding: 5px;
+        text-align: center;background: #666;
+        i,p{display: inline-block;vertical-align: middle;margin:0 2px;}
+        &:hover{background: #999;;}
+        
+      } 
+     
+    }
+
+  }
+
+
+  @include rwd-pad{ background:none; padding:8% 2%;
+    .sild,.sild--no{display: none;}
+
+    .member__box__sild{ 
+      width: 100%; float: none;margin: 10px auto 30px; line-height: 30px;
+
+      select { 
+        padding: 7px; width: 100%; margin: 0 auto ; background: #ebf6f8; 
+        color: #333; border: none; outline: none; display: inline-block;
+        box-shadow:0px 0px 5px rgba($color: #000000, $alpha: .35); 
+        cursor: pointer; border-radius: 4px;  }
+        label { position: relative; } 
+    }
+
+    .member__box__main{ 
+      width:100% ; float: none; padding-top: 40px;
+    }
+
+  }
+
+  @include rwd-mobile{
+    .member__box__main{ 
+      .member__img{ width: 150px; ;}
+      .member__table{ 
+        .member__table__tb{
+          display: block;  margin: 0px auto 15px auto; width: 90%;
+          padding:0 0 10px 5% ;
+          
+              
+        }      
+      }
+    }
+  }
+  
+}
+
+
+//按鈕
+.member__btn{ text-align: center; margin-top: 30px;
+  button,a{ 
+    background: #168ECC; border: none; color: #fff;
+    padding: 10px 30px; cursor: pointer;
+    &:hover{ background: $color-main;}
+  }
+}
+.device__btn{ margin-top: 20px;
+  button,a{ 
+    background: #168ECC; border: none; color: #fff;
+    padding: 10px 30px; cursor: pointer;
+    &:hover{ background: $color-main;}
+  }
+}
+
+
+
+//登入裝置
+.device{  border-bottom:1px dotted #999;padding-bottom: 20px;margin-bottom: 20px;
+  display: grid; grid-template-columns:1fr 1fr ;
+  .device__left{text-align: center;}
+  .device__right{line-height: 36px;}
+
+}
+
+.mMuds { width: 72px; height: 72px; display: inline-block; } 
+.mMuds[data-device-type='1'] { background: no-repeat url(https://img.empyrean.tw/8321AB0F-5D26-4665-A8AE-92BF24F97C70.png) 0 -110px;
+  background-size: 72px 4525px;
+}
+.mMuds[data-device-type='2'] { background: no-repeat url(https://img.empyrean.tw/8321AB0F-5D26-4665-A8AE-92BF24F97C70.png) 0 -2019px;
+  background-size: 72px 4525px;
+}
+.mMuds[data-device-type='3'] { background: no-repeat url(https://img.empyrean.tw/8321AB0F-5D26-4665-A8AE-92BF24F97C70.png) 0 -714px;
+  background-size: 72px 4525px;
+}
+
+
+.Hl { width: 20px; height: 20px; display: flex; }
+.Hl[data-browser='3'] {
+  background: no-repeat url(https://img.empyrean.tw/8321AB0F-5D26-4665-A8AE-92BF24F97C70.png) 0 -1395px;
+  background-size: 72px 4525px;
+}
+.Hl[data-browser='4'] {
+  background: no-repeat url(https://img.empyrean.tw/8321AB0F-5D26-4665-A8AE-92BF24F97C70.png) 0 -1689px;
+  background-size: 72px 4525px;
+}

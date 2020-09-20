@@ -1,0 +1,19 @@
+body{
+	font: {
+		family:$base-font-style;
+		size: $base-font-size;
+	}
+	line-height: $base-line-height;
+}
+
+
+#Wrapper {width:100%;max-width:1200px;  margin:0px auto;}
+
+article{ padding-bottom:0px; position:relative; overflow:hidden}
+
+img{ max-width:100%;}
+
+a{ text-decoration: none;}
+
+
+

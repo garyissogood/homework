@@ -1,0 +1,215 @@
+// .header{ 
+//     width: 100%; background: #fff; display: block; position: relative; z-index: 111;
+//     box-shadow:0px 0px 5px rgba($color: #000000, $alpha: .2);    
+    
+//     @include rwd-pad { display: none;}
+    
+//     .header__box{ width:100%;  height: 60px; padding: 0 2%;}
+    
+//     .header__logo{float: left;display: block; width: 20%; padding: 15px 0 0 0; 
+//         img{width: 160px;}
+//         @include rwd-mac-normal { padding: 15px 0 0 10px;}
+//         @include rwd-normal { padding: 15px 0 0 10px;}
+        
+        
+//     }
+//     .header__menu{float: left; width: 56%; height: 100%; text-align: center;  
+//         >li{margin: 0 25px; display: inline-block;
+//             @include rwd-normal { margin: 0 15px;}
+//         } 
+//         .header__menu--btn{  height: 100%;  cursor: pointer; }
+//         .header__menu--sub{color: #000; font-weight: bold;line-height: 60px;                       
+//             &:hover{ color:$color-main;}
+//         }
+        
+//     }
+//     .header__link{float: left; width: 24%; height: 100%; display: flex; align-items: center; 
+//         .header__link__box { flex: 1;transition:all .5s;position: relative; overflow: hidden; }
+//         .header__link__box--icon{color: #666; cursor: pointer; display: inline-block;}
+        
+//         .header__link__box__content{
+//             display: block; position: absolute; top:0px; left: 20px;
+//             font-size: 13px; opacity: 0;transition:all .5s;
+//             .header__link__box--phone{font-size: 16px;color: $color-main;}
+//         }
+
+//         .header__link__box:hover{ flex: 1 1 50%; 
+//             .header__link__box__content{opacity: 1;}
+//             button{ color: #06c;}
+//             button:hover{color: $color-main;}
+//                 a:hover{ color: $color-main;}
+            
+//         }
+
+//         .header__link__box__search{
+//             button{ background: none; border: 0;}  
+//             input{ width: calc( 100% - 20px); margin-left: 5px;}
+//         }
+
+        
+//         .flex1:hover { flex: 1;}
+//         a:hover i{ color: $color-main;}
+
+//         .icon-facebook1 {font-size: 18px; }
+        
+//         .user__img{  padding:5px 5px 0 0; display: block;
+//             img{border-radius: 100%;border: 2px solid #999;}
+            
+//         }
+
+        
+//     }	
+
+    
+
+// }
+
+// .subline { color:$color-main; border-bottom: 1px solid $color-main;} 
+
+
+.pc{ 
+    width: 100%;height: 60px; background: #fff; position: relative; z-index: 111;
+    box-shadow:0px 0px 5px rgba($color: #000000, $alpha: .2);    
+    display: grid; grid-template-columns:20% 60% 20%; padding: 0 2%;
+
+    @include rwd-pad { display: none;}
+    
+
+    .pc__logo{
+        a{display: block;margin-top: 14px;}
+        svg{ width: 150px;
+            .st0{fill:#B60033;}
+        }
+    }
+
+    // 文字選單
+    .pc__menu{ width: 100%; display: block;text-align: center; 
+        
+        // 選單選項
+        .pc__menu__item{ 
+            display: inline-block;padding:0 5%;height: 60px;line-height: 60px;
+            font-weight: bold;color: #000;cursor: pointer;
+            .pc__menu__item__menuBtn{ position: relative;display: block;color: #000;
+                &::after{
+                    content: ""; position: absolute;bottom: 0;left: 0; 
+                    width: 100%; height: 2px; background: #f6f6f6;
+                }  
+                &:hover{color: $color-main;
+                    &::after{background: #777;} 
+                }
+            }
+
+            .menuBtn--on{
+                color: $color-main;
+                &::after{background: #777;} 
+            }
+            
+        }  
+
+        // 下拉選單區塊
+        .pc__menu__item__megaMenu{ 
+            width: 100%; position: absolute; left: 0; background: #fff;
+            border-top: 1px solid #999; display: none;
+            box-shadow:0px 0px 5px rgba($color: #000000, $alpha: .2); 
+
+            .dropdown{ display: flex; width: 60%; margin: 1.2% auto;
+                >li{
+                    flex:1 ; border-left: 1px solid #ccc ;
+                    &:last-child{border-right: 1px solid #ccc; }
+                    a{display: block;width: 100%;color: #666;
+                        &:hover{color: $color-main;}
+                    }
+                }
+            }
+        }        
+    }
+
+    // 搜尋,購物車,會員
+    .pc__link{text-align: right; position: relative; width: 100%;
+        li{ 
+            display: inline-block;vertical-align: middle; 
+            margin: 0 4%;transform: translateY(20px);
+        }
+        
+        .pc__link__search{
+            position: absolute;z-index: 112;left: 0%;top: 0px;background: #fff; 
+            width: 100%;height: 100%; text-align: center;padding-top:15px;
+            margin: 0 ;transform: translateY(0px);
+            button,input,i{display: inline-block;vertical-align: middle;}
+            button{ background: none; border: none;
+                &:hover{color: $color-main;cursor: pointer;}
+            }
+            input{
+                border: none; border-bottom: 1px solid #666;padding: 5px;
+                width: calc(100% - 60px);
+            }
+
+        }
+        .pc__link__icon{ font-size: 16px;color: #666;cursor: pointer;
+            &:hover{color: $color-main;}
+        }
+        .memberUser-nologin{
+            i{font-size: 19px;}
+        }
+        .memberUser-login{ transform: translateY(0px); position: relative;
+            .user__img{ 
+                display: block; width: 45px; position: absolute; right: 2%; top: -5px;
+                img{border-radius: 100%;border: 2px solid #999;}
+            }
+        }
+
+    }
+
+}
+
+
+.megaMenu{ width: 70%; padding: 0 5%; margin: 1.5% auto;
+
+    // brand 選單
+    .tab__megaMenu__nav { display: block; float: left; width: 20%;
+        
+        .tab__megaMenu__tabs { 
+            display: block;             
+
+            li { display: block; width: 100%;transition: all 0.5s;
+                >a { display: inline-block;color:#000; 
+                    padding: 5px 10px;line-height: 24px;
+                    &:hover{color: $color-main;}
+                }
+            }
+            
+            li.active{
+                >a{ border-bottom: 1px solid #333; }  
+                
+            }
+        }
+    }
+
+    .tab__container__megaMenu{display: block; float: left; width: 80%;text-align: left;
+
+        .megaMenu__box{
+            display: inline-block;vertical-align: top;border-left: 1px solid #ccc;
+            padding: 0 3%;margin-right: 3%; min-height: 200px; min-width: 30%;
+            >li{display: block;line-height: 36px;
+                a{font-weight: normal;color:#666;
+                    &:hover{color: $color-main;}
+                }
+            }
+        }
+        .megaMenu__boxII{
+            display: inline-block;vertical-align: top;border-left: 1px solid #ccc;
+            padding: 0 3%; min-height: 200px;
+            >li{display: block;line-height: 36px;
+                a{font-weight: bold;color:#333;
+                    &:hover{color: $color-main;}
+                }
+            }
+        }
+
+        .megaMenu__box--title{ font-weight: bold;color:#333;}
+        
+
+
+    }
+
+}

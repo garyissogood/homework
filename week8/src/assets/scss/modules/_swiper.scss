@@ -1,0 +1,84 @@
+
+//swiper-new product
+.swiper-container--list { 
+    width: 100%;  height: auto; margin: 0 auto ; 
+    padding:0px 20px 40px  !important;  
+    .swiper-pagination { bottom:0px;}
+    .swiper-button-prev { margin-left: -7px; color:#999}
+    .swiper-button-next { margin-right: -7px; color:#999} 
+}
+
+
+//最新產品
+.index__products{    
+    .swiper-slide { padding: 0 ; text-align: center;line-height:30px;
+        img{display: block; }
+        //hr{border: 2px solid #999; width: 50%; margin: 0 auto; color: #999;margin-bottom: 15px;}
+        .index__products--caption { 
+            color: #333; font-weight: bold; font-size: 18px; 
+        }
+        .index__products--sub { 
+            color: #333; font-size: 14px; line-height: 24px; width: 70%; margin: 0 auto; }
+        button{  border: 1px solid #666; padding: 8px 15px; margin-top: 10px; cursor: pointer;
+            i{ font-size: 18px; margin-right: 5px; vertical-align:text-bottom;color: #555;}
+        }
+        &:hover{ 
+            .index__products--caption,.index__products--sub{color: #c00;}
+        }
+    }
+}
+
+
+//最新訊息
+.index__news{   
+
+    .swiper-container--list { 
+        width: 100%;  height: auto; margin: 0 auto ; max-width: 1300px;
+        padding:0px 50px 60px  !important;  
+        .swiper-pagination { bottom:0px;}
+        .swiper-button--btn { width: 45px; height: 100%; top:0;background: #eee;}
+        .swiper-button-prev {  margin-left: -20px; }
+        .swiper-button-next {  margin-right: -20px; } 
+    }
+    .swiper-slide { line-height:30px; font-size: 12px;
+        a {
+            img{display: block; margin-bottom: 20px;}
+            span { padding: 5px 8px; color: #666; border: 1px solid #666; }
+            time { color: #005DFF; margin-left: 10px;}
+            p { color: #666; font-size: 14px; line-height: 20px; display: block; margin-top: 5px; }
+        }
+        a:hover { opacity: .5;
+            img{ opacity: .5;}
+            p { color: $color-main;  }
+        }  
+    }
+
+    
+}
+
+
+
+//產品介紹產品主選項
+.swiper__select{width: 96%;  height: 70px; margin-top: 30px; overflow: auto;
+    .swiper-slide{  width: auto; 
+        a{
+           padding: 5px 0; border-bottom: 1px solid #fff;color:#999; 
+           display: inline-block; font-size: 13px; line-height: 16px;
+           &:hover{color: $color-main;border-bottom: 1px solid $color-main}
+        }
+    }
+    .swiper-slide-active{
+        a{border-bottom: 1px solid #000;color:#000; }
+    }  
+    .swiper-button--btn{
+        width: 45px; height: 100%; top:-5px; 
+        font-size: 18px; color:#333; background: #fff;
+    }
+    .swiper-button-prev { margin-left: -10px; }
+    .swiper-button-next { margin-right: -10px;} 
+    .swiper-button-prev:after,.swiper-button-next:after{ content: '';}
+
+}
+
+
+

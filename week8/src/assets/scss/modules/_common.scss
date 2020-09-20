@@ -1,0 +1,220 @@
+// transform: translateX(-100%);
+// display: grid; grid-template-columns:1fr 1fr 1fr;
+// grid-column-gap:15px; grid-row-gap:15px;
+
+
+//標題
+.title { display: block; text-align: center; width: 100%; padding: 20px 0 ;
+    .title__box { max-width: 660px; margin: 0 auto; padding: 0 30px; }
+    .title__box--mainTitle {
+        border-bottom: 3px solid #999; display: inline-block; padding-bottom: 3px;
+        font-size: 24px; font-family: $title-font; color: #333;
+    }
+    hr { border-top: 1px solid #ccc;margin-top: -3px;}
+    .title__box--subtitle { font-size: 16px; padding-top: 5px; font-weight: bold; color: #666; }   
+    .title__box--list {
+        li { display: inline-block;}
+    }
+
+    //內文標題 use-愛用者,品牌故事
+    .title__box--sectitle{ 
+        border-bottom: 4px solid #666; display: inline-block; margin-bottom: -2px;font-size: 20px; padding-bottom: 5px;
+    }
+
+    //路徑
+    .breadcrumbs{ 
+        display: block; width: 100%; text-align: center;margin-top: 10px;
+        transform: scale(0.9);
+        a,i,b,p{
+            display: inline-block; font-size: 12px; color: #777; vertical-align: middle;
+        }
+        a:hover{ color:  $color-main;}
+        p{ color: #00295E;}
+    }
+}
+
+//路徑
+.breadcrumbs__bar {  
+    display: block; padding: 10px; text-align: center; background: #eee;
+    box-shadow:0px 0px 5px inset rgba($color: #000000, $alpha: .2);   
+    li { 
+        display: inline-block; margin:0 10px ; 
+        line-height: 12px; font-size: 12px;color: #666;
+        
+    }
+    
+    .breadcrumbs__bar--on{ font-weight: bold; color: #333;}
+
+    // @include rwd-mobile { display: flex;
+    //     li{ flex: 1; margin: 0;}
+    //     a{ font-size: 12px;}
+    // }
+}
+
+
+//內頁banner及路徑
+.bannerpage{
+    img{display: block;}
+    .breadcrumbs{ 
+        display: block; padding: 3px 2%; width: 100%; margin: 0 auto;
+        a,i,b,p{
+            display: inline-block; font-size: 12px; color: #666; vertical-align: middle;
+        }
+        a:hover{ color:  $color-main;}
+        p{ color: #00295E;}
+        @include rwd-pad { text-align: center;}
+    }
+}
+
+
+//內頁banner及路徑
+.pageTop{ position: relative; display: block; width: 100%; z-index: 110;
+
+    .breadcrumbs{ 
+        display: block; padding: 3px 2%; width: 100%; position: absolute;
+        a,i,b,p{
+            display: inline-block; font-size: 12px; color: #eee; vertical-align: middle;
+        }
+        a:hover{ color:  $color-main;}
+        p{ color: #fff;font-weight: bold;}
+    }
+
+    .breadcrumbs-block{
+        a,i,b{color: #666;}
+        p{color: #000;}
+    }
+
+    .title__text{
+        position: absolute;top: 50%;left: 50%; transform: translate(-50%,-50%);color: #fff;text-shadow:0 0 5px #666;text-align: center;
+        .title__text--small{
+            font-size: 16px;margin-bottom: 1.1rem; border: 1px solid #fff;display: inline-block;padding: 0 5px;
+        }
+        .title__text--big{font-size: 36px;line-height: 42px;}
+        .title__text--word{font-size: 32px;line-height: 42px;}
+        .title__text--title{font-size: 24px;line-height: 42px;}
+        .title__text--time{font-size: 12px;line-height: 45px;letter-spacing: 0.2rem;}
+        hr { border:none; border-top: 1px solid #ddd;  }
+    
+    }
+
+    
+
+    .banner{ 
+        display: block; width: 100%; height: 0; padding-bottom: 40%;background-attachment: fixed;
+        background-position: top center; background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bannerSmall{ 
+        display: block; width: 100%; height: 0; padding-bottom: 34.66%;background-attachment: scroll;
+        background-position: top center; background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    
+
+
+    @include rwd-pad { 
+        .breadcrumbs{text-align: center; top: 100%;
+            a,i,b,p{color: #666;}
+        }
+        hr { width:100%;  }
+        .title__text{  width: 80%;
+            .title__text--small{font-size: 12px;}
+            .title__text--title{font-size: 18px;line-height: 24px;}
+            .title__text--word{font-size: 12px;line-height: 24px;}
+        }
+        .banner{ 
+            padding-bottom: 40%;background-attachment: scroll;
+        }
+    }
+
+
+}
+
+
+
+//內頁內容器
+.mainContainer{ 
+    display: block; width: 100%; margin: 0 auto; padding:30px 0 100px 0;
+    overflow: hidden; 
+    @include rwd-pad {width: 96%;padding:20px 0 50px 0; }
+}
+
+
+//影片
+.youtube{ 
+    margin-top: 50px; width: 100%; height:0; padding-bottom: 56.25%; 
+    position: relative;overflow: hidden;
+    iframe{ width: 100%; height: 100%; position: absolute; top:0px; left:0px;}
+}
+
+//愛用者運動寫真
+.iframe__box{ 
+    width: 100%; height:0; padding-bottom: 60%; 
+    position: relative;overflow: hidden;
+    iframe{ width: 100%; height: 100%; position: absolute; top:0px; left:0px;}
+}
+
+.linebox{border: 1px solid #ccc;}
+
+
+//地圖
+.map{ 
+    width: 100%; height:0; padding-bottom: 30%; border-top: 3px solid #666;
+    position: relative;overflow: hidden;
+    iframe{ width: 100%; height: 100%; position: absolute; top:0px; left:0px;}
+    @include rwd-pad{padding-bottom: 50%;}
+}
+    
+
+//回上頁按鈕
+.back__btn{ display: block;text-align: center;margin: 50px 0;
+    a{ padding: 5px 20px; display: inline-block; border: 1px solid #666; color: #333;
+        i,p{display: inline-block;vertical-align: middle;}
+    }
+    a:hover{color: $color-main; border: 1px solid $color-main}
+}
+
+//側邊選單
+.tinynav { display: none; 
+    @include rwd-pad{display: block;}
+}
+
+
+//文字-大
+.fz-big{font-size: 16px; line-height: 28px;}
+
+
+
+
+
+.star{color: #f00;margin: 0 5px; }
+.big-word{font-weight: bold;font-size: 16px;}
+.gray-word{color: #666;}
+.two__box{ display: block;
+    .two__box--box{ display: inline-block; vertical-align: middle;}
+}
+.marginUpDown20{ margin: 20px 0;}
+.marginRight10{margin-right: 10px;}
+.frame-word{padding:5px 10px;background: #ccc;margin: 5px 0;}
+input[type=text].width30{width: 100px;}
+
+//隱私,免責
+.page { width: 100%; max-width: 1000px; margin: 0 auto;
+    h3{font-weight: bold;font-size: 16px; margin-top: 30px;}
+    ol{list-style-type: decimal; margin: 10px 0 10px 1rem;}
+}
+
+//灰背景
+.bg-gray{background: #f9f9f9;}
+
+
+//詳細頁分享按鈕
+.share{text-align: center; display: block;background: #eee; padding: 10px 0;
+    .share-buttons{
+        li{margin: 0 5px;}
+    }
+}
+
+

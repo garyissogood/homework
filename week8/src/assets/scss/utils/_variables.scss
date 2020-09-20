@@ -1,0 +1,66 @@
+// @import url(../css/fonts.css);
+
+
+$base-font-size:	14px;
+$base-font-color:	#555;
+$base-line-height: 	24px;
+$base-font-style:	Arial,"微軟正黑體","Microsoft JhengHei",sans-serif;
+$title-font: Times New Roman;
+
+$color-main:#A30027;
+$color-r:#c00;
+$color-b:#06C;
+$color-o:#ff5a00;
+$color-g:#393;
+$color-p:#bc60a1;
+$color-br:#963;
+
+
+$pc-big: 1920px;
+$pc: 1600px;
+$nb: 1366px;
+$nb-s: 1365px;
+$mac-b:1281px;
+$mac: 1280px;
+$mac-s: 1279px;
+$normal-b: 1025px;
+$normal: 1024px;
+$normal-s: 1023px;
+$pad-b: 769px;
+$pad: 768px;
+$pad-s: 767px;
+$mobile-big-b: 641px;
+$mobile-big: 640px;
+$mobile-big-s: 639px;
+$mobile-b: 481px;
+$mobile: 480px;
+$phonePlus:414px;
+$phoneX:375px;
+$phoneSe:320px;
+
+
+
+// 手機
+// 320×568 (16:9)
+// 360×640 (16:9)
+// 375×667 (16:9)
+// 414×736 (16:9)
+// 768×1024 (4:3)
+// 768×1366 (16:9)
+// 900×1440 (16:10)
+// 1080×1920 (16:9)
+// -----------------
+// 平板
+// 600×960 (16:10)
+// 600×1024 (10:6)
+// 768×1024 (4:3)
+// 800×1280 (16:10)
+// 1080×1920 (16:9)
+// -----------------
+// 桌機
+// 1024×768 (4:3)
+// 1280×1024 (10:8)
+// 1366×768 (16:9)
+// 1440×900 (16:10)
+// 1600×900 (16:9)
+// 1920×1080 (16:9)

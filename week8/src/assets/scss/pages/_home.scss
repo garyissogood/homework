@@ -1,0 +1,176 @@
+main{  display: block; margin: 0;
+    @include rwd-pad { margin-top: 60px;}
+}
+
+
+//輪播圖
+.index__banner{
+    .swiper-container { 
+        .swiper-button-prev,.swiper-button-next { opacity: .5;}
+    }   
+    img{display: block;}
+
+}
+
+
+
+
+
+//最新訊息
+.index__news{ background: #eee;  padding: 40px 0;
+    .tab__box {
+        .tab__nav {width: 97%;margin-bottom: 10px;}
+    }
+}
+
+.news__list{ width: 100%;  margin: 50px auto; padding: 0 2%; max-width: 800px;
+    li { display: block; margin-bottom: 15px; border-bottom: 1px dotted #ccc; 
+        padding-bottom: 10px;
+        a{ color: #333;
+            time,p { display: inline-block; vertical-align: top;}
+            time { width: 80px; color: #06c; } 
+            p{width: calc(100% - 90px);}               
+        }
+        a:hover { color: $color-main; }            
+    }
+}
+
+.more {  text-align: center; margin: 40px auto 0px; color: #555;
+    .more__btn { 
+        display: inline-block; padding: 1px 1px; font-size: 12px; color: #666;
+        &:hover{ color: $color-main; }
+    }
+}
+
+//其他服務
+.index__other { display: block; text-align: center;
+    li { display: inline-block;margin: 0 50px;
+        a { color:#333}
+        a:hover { color:$color-main; opacity: .7;}
+        
+        @include rwd-pad {margin: 0 ; width: calc(50% - 4px);}
+        @include rwd-mobile-big {margin:0 0 20px 0 ; display: block; width: 100%;}
+    }
+}
+
+
+//訂閱電子報
+.index__newsletter { 
+    display: block; width: 100%;text-align: center;  margin: 100px 0;
+    span { display: block; font-weight: bold;}
+    .index__newsletter--title { 
+        color:#333;  font-size: 16px; margin-bottom: 20px;
+        border-bottom: 1px solid #000;display: inline-block;
+    }
+    .index__newsletter--info { 
+        color:#666; margin-top: 20px;letter-spacing: 0.3rem;
+        b{text-decoration: underline;font-weight: bold;color: #666;}
+    }
+    input { width: 350px; padding: 5px;}
+    button { padding: 7px 15px; background: #06c; border: 0; color: #fff; cursor: pointer; }
+    button:hover{  background: $color-main;}
+
+    @include rwd-pad { height: auto; margin-top:30px; padding: 5% 0;
+        span { padding-top: 0;}
+        input { width: calc(90% - 100px);}
+    }
+}
+
+
+//最新產品
+.index__products{  padding-bottom: 0;
+    .title{ padding:2% 0 1% 0 ;}
+}
+
+
+//首頁產品
+.index__probox{position: relative; display: block;padding: 2% 0 15% 0;
+    
+    img{transition: all 0.5s; }
+
+    &:hover{  background: rgb(248, 248, 248);
+        text-decoration: none; color: #06c;
+        img{transform: scale(1.03);}
+        
+        // button{ opacity: .8}
+    }  
+
+}
+
+
+
+//焦點圖
+.focus__title{ text-align: center;  padding:1.5% 0; position: relative;z-index: 10;
+    border-bottom: 1px solid #eee;
+    h3{  font-size: 24px;border-bottom: 3px solid #999;display: inline-block;padding-bottom: 3px;}
+    &:before{ content: ""; width: 70px; height: 45px; background: #fff;
+        position: absolute; left: calc( 50% - 35px ); z-index: -1; bottom: 0px;
+        
+    }
+    &:after{ content: ""; width: 70px; height: 60px; background: #fff;
+        position: absolute; left: calc( 50% - 35px ); z-index: -2; bottom: -20px;
+        border-radius: 50%;border: 1px solid #eee;
+    }
+}
+
+.index__focus{ 
+    display: grid; grid-template-columns:1fr 1fr; position: relative;
+    
+    div:nth-child(2),div:nth-child(3){ background: #F2F2F2;}
+    div:nth-child(1),div:nth-child(4){ background: #F9F9F9;}
+    // div:nth-child(3),div:nth-child(4){ padding: 5% 3% 100px 3%;}
+    div:nth-child(even){border-left: 1px solid #e9e9e9;}
+
+    .focus{  
+            text-align: center; padding:5% 3% ;
+            border-bottom: 1px solid #e9e9e9;
+
+        .focus--name{ 
+            font-size: 16px;display: block; margin-bottom: 15px; 
+            font-weight: bold; color: #f25920;
+        }
+        .foucus--title{ font-size: 24px; font-weight: bold;}
+        
+        .more{ 
+            padding: 1% 5%; 
+            background: rgba($color: #fff, $alpha: .8); 
+            display: inline-block;
+            border: 1px solid #999; margin: 20px auto 0px;
+            &:hover{ opacity: .6; text-decoration: none;
+                color: #fff;
+                background: rgba($color: #333, $alpha: .8); 
+            }  
+        }  
+        .focus--img{ display: block; margin-top:5%; } 
+        img{display: inline-block; transition: all 0.5s;}
+    }
+
+
+    // div:nth-child(1){
+    //     background: url(../images/pic/bg7.jpg) no-repeat top right; background-attachment: fixed;;
+    // }
+    // div:nth-child(4){
+    //     background: url(../images/pic/bg7.jpg) no-repeat top right; background-attachment: fixed;
+    // }
+    // div:nth-child(2){
+    //     background: url(../images/pic/bg9.jpg) no-repeat top right; background-attachment: fixed;;
+    // }
+    // div:nth-child(3){
+    //     background: url(../images/pic/bg9.jpg) no-repeat top right; background-attachment: fixed;;
+    // }
+
+    @include rwd-mobile{
+        grid-template-columns:1fr ;
+    }
+
+    // &:after{ content: ""; width: 100%; height: 50px; 
+    //     background:url(../images/index-bar.jpg) no-repeat top center;
+    //     position: absolute;  z-index: 11; bottom: 0px;
+        
+    // }
+
+
+}
+
+
+.color-mio{ color: #f25920;}

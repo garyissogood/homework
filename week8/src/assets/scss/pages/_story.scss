@@ -1,0 +1,43 @@
+
+
+.story__info{ 
+  width: 80%; margin: 0 auto;text-align: center; line-height: 36px;
+  h3{font-weight: bold;font-size: 16px;}
+  p{ line-height: 24px; color: #333333;}
+  h2{color: $color-main; font-weight: bold; font-size: 16px;line-height: 42px;}
+  i{display: block; color: #468DA8;}
+
+}
+
+.story__box{ width: 80%; margin: 0 auto;
+  span{
+    display: inline-block; vertical-align: middle; 
+    width: calc(50% - 4px);padding: 2%;line-height: 36px;
+  }
+
+}
+
+
+#brand__story{width: 80%; margin: 0 auto; cursor: pointer;
+  .swiper-container--list { 
+    width: 100%;  height: auto; margin: 0 auto ; max-width: 1300px;
+    padding:30px 50px 60px  !important;  
+    .swiper-pagination { bottom:0px;}
+    .swiper-button--btn { width: 45px; height: 100%; top:0;background: #fff;}
+    .swiper-button-prev {  margin-left: -20px; }
+    .swiper-button-next {  margin-right: -20px; } 
+  }
+  .swiper-slide { line-height:30px; font-size: 12px;
+      img{display: block; margin-bottom: 20px;}
+      span {  color: #666;  }
+      time { color: #005DFF; border: 1px solid #7aabff ;padding: 5px 8px;}
+      p { color: #444; font-size: 13px; line-height: 20px; display: block; margin-top: 5px; }
+  }
+  
+  .swiper-pagination-bullet {
+    width: 20px; height: 20px; text-align: center; line-height: 20px;margin: 0 5px;
+    font-size: 12px; color: #666; opacity: 1; background: rgba(0,0,0,0.2);
+  }
+  .swiper-pagination-bullet-active { color: #fff; background: #007aff; }
+
+}

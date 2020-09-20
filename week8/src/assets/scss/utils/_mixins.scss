@@ -1,0 +1,106 @@
+
+//電腦 大螢幕 1920px
+@mixin rwd-pc-big() {
+	@media all and (max-width: $pc-big) {
+		@content;
+	}
+}
+
+//電腦 1600px
+@mixin rwd-pc() {
+	@media all and (max-width: $pc) {
+		@content;
+	}
+}
+
+//筆電 13吋 1366px
+@mixin rwd-nb() {
+	@media all and (max-width: $nb) {
+		@content;
+	}
+}
+
+//筆電 mac 1280px
+@mixin rwd-mac() {
+	@media all and (max-width: $mac) {
+		@content;
+	}
+}
+
+//筆電過渡基本  1279px~1025px 
+@mixin rwd-mac-normal() {
+    @media all and (min-width:$normal-b) and (max-width: $mac-s) {
+		@content;
+	}
+}
+
+//基本尺寸 1024px
+@mixin rwd-normal() {
+	@media all and (max-width: $normal) {
+		@content;
+	}
+}
+
+//桌機筆電過渡平板  1023px~769px 
+@mixin rwd-normal-pad() {
+    @media all and (min-width:$pad-b) and (max-width: $normal-s) {
+		@content;
+	}
+}
+
+//平板 768px
+@mixin rwd-pad() {
+	@media all and (max-width: $pad) {
+		@content;
+	}
+}
+
+//平板過渡手機  769px~641px 
+@mixin rwd-pad-mobile-big() {
+    @media all and (min-width:$mobile-big-b) and (max-width: $pad-s) {
+		@content;
+	}
+}
+
+//手機-大 640px
+@mixin rwd-mobile-big() {
+	@media all and (max-width: $mobile-big) {
+		@content;
+	}
+}
+
+//大手機過渡一般手機 639px~481px
+@mixin rwd-mobile-big-mobile() {
+	@media all and (min-width: $mobile) and (max-width:$mobile-big-b) {
+		@content;
+	}
+}
+
+//一般手機 480px
+@mixin rwd-mobile() {
+	@media all and (max-width: $mobile) {
+		@content;
+	}
+}
+
+//iponePlus 414px
+@mixin rwd-phonePlus() {
+	@media all and (max-width: $phonePlus) {
+		@content;
+	}
+}
+
+//iponePlus 375px
+@mixin rwd-phoneX() {
+	@media all and (max-width: $phoneX) {
+		@content;
+	}
+}
+
+//iponePlus 320px
+@mixin rwd-phoneSe() {
+	@media all and (max-width: $phoneSe) {
+		@content;
+	}
+}
+

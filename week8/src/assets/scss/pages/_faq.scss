@@ -1,0 +1,14 @@
+
+.faq{ width: 100%; max-width: 800px; margin: 50px auto;
+  .faq__Q,.faq__A{display: block;padding: 5px 10px;}
+  .faq__Q--text,.faq__A--text{
+    display: inline-block;vertical-align: top;width: calc(100% - 40px);
+  }
+  .faq--bold{font-weight: bold;display: inline-block;vertical-align: top;}
+  ol{ list-style-type:decimal;padding-left: 20px;}
+  .faq__Q{background: #ccc;margin-top: 5px; cursor: pointer;}
+  .faq__Q:nth-of-type(even){background:#ddd;}
+  .faq__A{margin-bottom: 10px;}
+
+
+}

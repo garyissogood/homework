@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "AGAA,OAAO,CAAC,cAAI",
+    "sources": [
+        "../../sass/new-products.scss",
+        "../../sass/vendors/_bootstrap.scss",
+        "../../sass/vendors/_jquery-ui.scss",
+        "../../sass/utils/_variables.scss",
+        "../../sass/utils/_mixins.scss",
+        "../../sass/utils/_extend.scss",
+        "../../sass/themes/_empy-products.scss"
+    ],
+    "names": [],
+    "file": "new-products.min.css"
+}
