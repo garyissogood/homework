@@ -32,6 +32,16 @@ const routes = [
         path: '/cart',
         name: '購物車',
         component: () => import('../views/Cart.vue')
+      },
+      {
+        path: '/order',
+        name: '購物車結帳',
+        component: () => import('../views/Order.vue')
+      },
+      {
+        path: '/checkout',
+        name: '購物車結帳完成',
+        component: () => import('../views/Checkout.vue')
       }
     ]
   },
@@ -55,6 +65,16 @@ const routes = [
         path: 'coupons',
         name: '管理優惠券',
         component: () => import('../views/dashboard/Coupons.vue')
+      },
+      {
+        path: 'order',
+        name: '訂單列表',
+        component: () => import('../views/dashboard/Order.vue')
+      },
+      {
+        path: 'storages',
+        name: '圖片儲存列表',
+        component: () => import('../views/dashboard/Storages.vue')
       }
     ]
   }

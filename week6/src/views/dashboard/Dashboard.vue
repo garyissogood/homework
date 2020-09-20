@@ -4,6 +4,8 @@
       <router-link to="/">回到前台</router-link> |
       <router-link to="/admin">管理首頁</router-link> |
       <router-link to="/admin/products">管理產品列表</router-link> |
+      <router-link to="/admin/order">管理訂單列表</router-link> |
+      <router-link to="/admin/storages">管理圖片列表</router-link> |
       <router-link to="/admin/coupons">管理優惠券</router-link>
     </div>
     <h2>這是 [ 管理頁面 ] 頁</h2>
